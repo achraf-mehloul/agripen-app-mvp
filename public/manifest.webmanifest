@@ -1,0 +1,19 @@
+{
+  "name": "AgriPen — مساعد الفلاح الذكي",
+  "short_name": "AgriPen",
+  "description": "منصة زراعة ذكية: تحليل التربة، تشخيص أمراض النباتات، ومساعد صوتي باللهجة الجزائرية.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eaf6ec",
+  "theme_color": "#2f7d4f",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["productivity", "utilities", "education"],
+  "icons": [
+    { "src": "/pwa-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" },
+    { "src": "/pwa-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/pwa-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AgriPen</title>
+<link rel="icon" href="/pwa-icon.svg" type="image/svg+xml">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box }
+  html,body { margin:0; height:100% }
+  body {
+    font-family: "IBM Plex Sans Arabic","Rubik",system-ui,sans-serif;
+    background: linear-gradient(160deg,#f4efe4 0%,#e5efd8 100%);
+    color: #223018;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: linear-gradient(160deg,#141a12 0%,#1b2417 100%); color: #ecead8; }
+  }
+  .card {
+    max-width: 420px; width: 100%;
+    background: rgba(255,255,255,.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 28px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 30px 60px -30px rgba(0,0,0,.25);
+  }
+  @media (prefers-color-scheme: dark) {
+    .card { background: rgba(20,26,18,.6); }
+  }
+  .icon { font-size: 56px; line-height: 1; margin-bottom: 12px }
+  h1 { font-size: 22px; margin: 0 0 8px; font-weight: 800 }
+  p { font-size: 14px; margin: 0 0 20px; opacity: .8; line-height: 1.6 }
+  button {
+    background: linear-gradient(135deg,#556b2f,#8b9d2c);
+    color: #fff; border: 0; border-radius: 16px;
+    padding: 12px 22px; font-weight: 700; font-size: 14px;
+    cursor: pointer; box-shadow: 0 10px 24px -10px rgba(85,107,47,.6);
+  }
+  button:active { transform: scale(.96) }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">🌱</div>
+    <h1>لا يوجد اتصال</h1>
+    <p>أنت الآن في وضع عدم الاتصال. بياناتك محفوظة محليًا، وسنعاود المزامنة تلقائياً عندما يعود الإنترنت.</p>
+    <button onclick="location.reload()">إعادة المحاولة</button>
+  </div>
+</body>
+</html>
