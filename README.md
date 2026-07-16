@@ -193,4 +193,4 @@ K --> L[AI Analysis]
 L --> M[Recommendations]
 
 M --> N[Farmer]
-```
+```# agripen-app-mvp
