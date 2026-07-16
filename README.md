@@ -94,3 +94,103 @@ AgriPen is an intelligent agriculture ecosystem that combines a portable soil an
 - Bearer token authentication for all server functions
 - Signed webhook verification for public API endpoints
 - Push subscription cleanup on expiry
+
+
+## Complete System Architecture
+
+```mermaid
+graph TB
+
+subgraph Device
+A1[ESP32]
+A2[Soil Sensors]
+A3[Battery]
+A4[Bluetooth]
+end
+
+subgraph Mobile App
+B1[Authentication]
+B2[Farm Management]
+B3[Maps]
+B4[Voice Assistant]
+B5[Disease Detection]
+B6[Weather]
+B7[Reports]
+end
+
+subgraph AI Engine
+C1[Soil Analysis]
+C2[Crop Recommendation]
+C3[Irrigation AI]
+C4[Fertilization AI]
+C5[Vision AI]
+C6[Prediction Models]
+end
+
+subgraph Database
+D1[Users]
+D2[Farms]
+D3[Soil Analyses]
+D4[Images]
+D5[Reports]
+end
+
+A2 --> A1
+A1 --> A4
+A4 --> B2
+
+B2 --> C1
+B5 --> C5
+B6 --> C6
+B4 --> C2
+
+C1 --> D3
+C2 --> D5
+C5 --> D4
+B1 --> D1
+B2 --> D2
+```
+
+## AgriPen Device Workflow
+
+```mermaid
+flowchart LR
+
+A[Insert AgriPen into Soil]
+
+A --> B[Read Sensors]
+
+B --> C[Moisture]
+
+B --> D[pH]
+
+B --> E[Temperature]
+
+B --> F[N]
+
+B --> G[P]
+
+B --> H[K]
+
+C --> I[ESP32]
+
+D --> I
+
+E --> I
+
+F --> I
+
+G --> I
+
+H --> I
+
+I --> J[Bluetooth / Wi-Fi]
+
+J --> K[AgriPen Mobile App]
+
+K --> L[AI Analysis]
+
+L --> M[Recommendations]
+
+M --> N[Farmer]
+```
