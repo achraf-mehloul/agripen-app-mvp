@@ -95,7 +95,6 @@ AgriPen is an intelligent agriculture ecosystem that combines a portable soil an
 - Signed webhook verification for public API endpoints
 - Push subscription cleanup on expiry
 
-
 ## Complete System Architecture
 
 ```mermaid
@@ -193,4 +192,6 @@ K --> L[AI Analysis]
 L --> M[Recommendations]
 
 M --> N[Farmer]
-```# agripen-app-mvp
+```
+
+# agripen-app-mvp
